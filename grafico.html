@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="" />
+        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors" />
+        <meta name="generator" content="Astro v5.13.2" />
+        
+        <title>Portafolio 2.0</title>
+    
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <meta name="theme-color" content="#00bcd4" />
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    </head>
+    <body>
+        <header data-bs-theme="dark">
+            <div class="collapse" id="navbarHeader">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-md-7 py-4">
+                            <h4>Acerca de</h4>
+                            <p class="text-body-secondary">
+                                Este es mi portafolio de Diseño 2025 con Bootstrap en el ramo de Intro. al Desarrollo Web con el profe Faco.
+                            </p>
+                            <h4>Habilidades</h4>
+                            <table id="aqui" class="table"></table>
+                        </div>
+                        <div class="col-sm-4 offset-md-1 py-4">
+                            <h4>Contacto</h4>
+                            <ul class="list-unstyled">
+                                <li><a href="https://github.com/Mikuby11" class="text-black">Follow on github</a></li>
+                                <li><a href="https://www.instagram.com/fefy_humeres" class="text-black">Like on Instagram</a></li>
+                                <li><a href="mailto:fernanda.humeres@uc.cl" class="text-black">Email me</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar navbar-dark bg-dark shadow-sm">
+                <div class="container">
+                    <a href="#" class="navbar-brand d-flex align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24">
+                            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                            <circle cx="12" cy="13" r="4"></circle>
+                        </svg>
+                        <strong>Portafolio visual</strong>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="py-5 text-center container">
+                <div class="row py-lg-5">
+                    <div class="col-lg-6 col-md-8 mx-auto">
+                        <h1 class="fw-light">Fernanda Humeres - Diseñadora integral</h1>
+                        <p class="lead text-body-secondary">Soy una estudiante de 5to semestre de diseño integral en la Pontificia Universidad Católica, me gusta mucho el diseño digital, la impresión 3D y ahora también la programación! Mi punto débil es un poco la formulación y el diseño gráfico, pero estoy trabajando para mejorar.</p>
+                        <p>
+                            <a href="index.html" class="btn btn-outline-primary">Página Principal</a> 
+                            <a href="grafico.html" class="btn btn-outline-info">Gráfico</a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="container mb-5">
+                <div class="card shadow">
+                    <div class="card-header">
+                        <strong>Gráfico de satisfacción</strong>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="alla"></canvas>
+                    </div>
+                </div>
+            </section>
+            
+<script>
+  new Chart("alla", {
+    type: "line",
+    data: {
+      labels: ['Trabajo 1','Trabajo 2','Trabajo 3','Trabajo 4','Trabajo 5','Trabajo 6',
+                 'Trabajo 7','Trabajo 8','Trabajo 9','Trabajo 10','Trabajo 11','Trabajo 12'],
+      datasets: [
+                  {
+                  label: "nivel de satisfacción",
+                  data: [90, 70, 85, 100, 60, 95, 80, 75, 100, 85, 65, 90],
+                  backgroundColor: ['rgba(172, 217, 230, 0.8)',],
+                  borderColor: ['rgba(39, 77, 245, 0.8)',],
+                  borderWidth: 3
+                             },
+                    ],
+                },
+                options: {
+                    plugins: {
+                        legend: {
+                            display: true,
+                        },
+                    },
+                },
+            });
+        </script>
+        </main>
+        <footer class="text-body-secondary py-5">
+            <div class="container">
+                <p class="float-end mb-1"><a href="#">Back to top</a></p>
+                <p class="mb-1">Fernanda Humeres López (Mikuby) &copy; 2025</p>
+                <p class="mb-0">Gracias por leer!</p>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script src="script.js"></script>
+        <script>
+            const habilidades = [
+                {programa:"Photoshop", valor:"10"},
+                {programa:"Illustrator", valor:"50"},
+                {programa:"Indesign", valor:"30"},
+                {programa:"Fusion", valor:"100"},
+                {programa:"Figma", valor:"60"},
+                {programa:"Canva", valor:"90"},
+            ]
+            const donde = document.querySelector("#aqui")
+
+            habilidades.forEach((h)=>{
+                donde.innerHTML += `<tr>
+                                    <td class="w-25 text-dark">${h.programa}</td>
+                                    <td>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 5"> 
+                                            <rect width="${h.valor}" height="5" rx="2.5"/>
+                                        </svg>
+                                    </td>
+                                </tr>`;
+            });
+        </script>
+    </body>
+</html>
